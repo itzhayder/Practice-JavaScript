@@ -25,3 +25,37 @@ function getUser(userType) {
 
 const students = getUser("Teacher");
 console.log(students);
+
+//  Promise Practice
+
+const count = 1;
+const promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (count) {
+            resolve({
+                name: "Hayder",
+                id: "1521231642",
+                department: "ECE",
+                major: "CSE"
+            });
+        }
+        else {
+            reject("I broke the promise.");
+        }
+    }, 2000);
+});
+
+promise1
+.then(res => {
+    console.log(res);
+})
+.catch(err => {
+    console.log(err);
+})
+
+async function prom() {
+    const result = await promise1;
+    console.log(result);
+}
+
+prom();
