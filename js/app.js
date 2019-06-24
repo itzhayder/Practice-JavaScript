@@ -53,9 +53,11 @@ promise1
     console.log(err);
 })
 
+console.log(promise1);
 async function prom() {
     const result = await promise1;
     console.log(result);
 }
 
 prom();
+
