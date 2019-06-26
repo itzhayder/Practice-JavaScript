@@ -28,3 +28,8 @@ th {
 #t01 tr:nth-child(odd) {
     background-color: white;
 }
+
+.block1 {
+    width: max-content;
+    background-color: powderblue;
+}
