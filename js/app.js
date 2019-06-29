@@ -1,6 +1,6 @@
 
-// array.forEach()
-// array.filter()
+// array.forEach(callback(currentValue [, index [, array]])[, thisArg])
+// array.filter(element, index, array)
 // array.find()
 // array.every()
 
@@ -28,7 +28,7 @@ console.log(students);
 
 //  Promise Practice
 
-const count = 1;
+const count = 0;
 const promise1 = new Promise((resolve, reject) => {
     setTimeout(() => {
         if (count) {
@@ -55,9 +55,27 @@ promise1
 
 console.log(promise1);
 async function prom() {
-    const result = await promise1;
-    console.log(result);
+    try {
+        const result = await promise1;
+        console.log(result);
+    }
+    catch (err) {
+        console.log(err);
+    }
 }
 
 prom();
 
+
+const doctor = name => {
+    console.log(name);
+}
+
+doctor("Dr. Tousif Rahman");
+
+const hero = ['Lina', 'Ursa', 'Witch Doctor', 'Lina', 'Phantom Assassin'];
+const take = 'Ursa';
+
+const selected = hero.filter(el => el === 'Lina');
+
+console.log(selected);
