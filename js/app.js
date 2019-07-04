@@ -79,3 +79,8 @@ const take = 'Ursa';
 const selected = hero.filter(el => el === 'Lina');
 
 console.log(selected);
+
+// ==== Local and Session Storage ====
+
+localStorage.setItem('name', 'Hayder');
+localStorage.clear();
