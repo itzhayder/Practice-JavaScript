@@ -5,7 +5,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-table {
+/* table {
     width: 50%;
 }
 
@@ -32,5 +32,19 @@ th {
 .block1 {
     width: max-content;
     background-color: powderblue;
+} */
+
+
+.grid-container > div {
+    padding: 20px;
+    background-color: lightcoral;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 50px 100px;
 }
 
