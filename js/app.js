@@ -127,4 +127,70 @@ function setToBlue (object) {
 
 setToBlue(originalObject);
 
+const dictionary = {
+    car: 'automobile',
+    cat: 'fluffy animal',
+    number: 8,
+    print: function () {
+        console.log(`I'm in the dictonary`);
+    }
+};
 
+function alertThenReturn () {
+    console.log('Message 1');
+    return function () {
+        console.log('Message 2');
+    }
+}
+
+function callAndAdd (n, getSecondValue) {
+    return n + getSecondValue();
+}
+
+function secondValue () {
+    return 5;
+}
+
+callAndAdd(2, secondValue);
+
+// array.forEach(callbackfunction(currentvalue, index, array)) ==>> it doesn't return anything
+// array.map ==>> it return an array
+function each(array) {
+    positiveNumber = array.filter( el => el > 0);
+    console.log(positiveNumber);
+}
+
+numbers = [-2, 5, -10, 0, -1, 8, 1, -9, 6];
+each(numbers);
+
+const positive = numbers.map(el => {
+
+});
+
+// === Function Scoped ====
+
+const num1 = 5;
+
+function functionOne() {
+  const num2 = 10;
+
+  function functionTwo(num3) {
+    const num4 = 35;
+
+    return num1 + num2 + num3 + num4;
+  }
+
+  return functionTwo(0);
+}
+
+console.log(functionOne());
+
+const symbol = '¥';
+
+function displayPrice(price) {
+  const symbol = '$';
+  console.log(symbol + price);
+}
+
+displayPrice('80');
+console.log(symbol);
