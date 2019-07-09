@@ -7,8 +7,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <title>HTML, CSS & JavaScript</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 <body>
+        
     
     <!-- <h1>Hello World</h1>
     <p>I'm new here. I love to learn.</p>
@@ -47,9 +50,10 @@
       </table> -->
 
     <div class="grid-container">
-        <div>A</div>
-        <div>B</div>
-        <div>C</div>
+        <div ng-app="">
+            <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+            <h1>Hello {{name}}</h1>
+        </div>
     </div>
 
 

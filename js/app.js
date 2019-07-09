@@ -194,3 +194,91 @@ function displayPrice(price) {
 
 displayPrice('80');
 console.log(symbol);
+
+
+
+// ***** Quiz Practice - Lecture 6, 7 & 8 *****
+
+function greetings() {
+    name2 = 'hayder';
+}
+
+let a = new Array(1, 2, 3);
+let b = new Array(10);
+let c = ['Banana', 'Orange', 'Apple', 'Mango'];
+
+console.log(c.join(' => '));
+console.log(c.pop());
+console.log(c);
+console.log(c.push('Jack Fruit'));
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let e = fruits.slice(2);
+console.log(fruits);
+fruits.sort();
+console.log(fruits);
+fruits.reverse();
+console.log(fruits);
+console.log(e);
+
+let digits = [40, 100, 1, 5, 25, 10];
+
+let fd = digits.find(el => el > 10);
+
+console.log(fd);
+
+let start = Date.now();
+
+function addSomeNumber1(num1, num2){
+    return num1 + num2;
+}
+function addSomeNumber2(num1) {
+    return num1 + arguments[1];
+}
+var result1 = addSomeNumber1(100,200);
+var result2 = addSomeNumber2(100,200);
+
+let stop = Date.now();
+
+console.log(stop + ' ' + start);
+
+let d = new Date();
+console.log(d);
+
+// ***** Function Overloading *****
+function func() {
+    switch(arguments.length) {
+        case 0:
+            console.log('no arguments');
+            break;
+        case 1:
+            console.log('one arguments');
+            break;
+        case 2:
+            console.log('two arguments');
+            break;
+        default:
+            console.log('Default');
+            break;
+    }
+}
+
+func();
+
+let mobile = {};
+Object.defineProperty(mobile, 'name', {
+    writable: true,
+    value: 'Nokia'
+});
+mobile.name = 'Samsung';
+console.log(mobile.name);
+
+let persona = {};
+Object.defineProperty(persona, 'taste', {
+  configurable: false,
+  value: 'Nicholas'
+});
+
+let z = (JSON.stringify(fruits));
+  
